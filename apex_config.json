@@ -1,0 +1,73 @@
+{
+  "system": {
+    "name": "APEX PREDATOR V2",
+    "version": "2.0",
+    "mode": "beast_mode_ultimate"
+  },
+  
+  "machines": {
+    "triangular": 5,
+    "pump_sniper": 5,
+    "funding_rate": 5,
+    "total": 15
+  },
+  
+  "risk": {
+    "max_daily_loss": 5000,
+    "max_concurrent_trades": 50,
+    "margin_level_minimum": 1.5,
+    "max_position_size": 25000,
+    "leverage_triangular": 3,
+    "leverage_pump": 1,
+    "leverage_funding": 2
+  },
+  
+  "strategies": {
+    "triangular": {
+      "enabled": true,
+      "min_profit_pct": 0.3,
+      "execution_timeout_ms": 50,
+      "leverage": 3
+    },
+    "pump_sniper": {
+      "enabled": true,
+      "min_confidence": 0.8,
+      "volume_spike_threshold": 5.0,
+      "price_change_threshold": 2.0
+    },
+    "funding_rate": {
+      "enabled": true,
+      "min_funding_rate": 0.02,
+      "min_total_yield": 0.03
+    }
+  },
+  
+  "binance": {
+    "api_key": "YOUR_API_KEY",
+    "api_secret": "YOUR_API_SECRET",
+    "subaccount_count": 5,
+    "testnet": false
+  },
+  
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "db": 0
+  },
+  
+  "dashboard": {
+    "enabled": true,
+    "port": 8000
+  },
+  
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  
+  "vpn_rotation": {
+    "enabled": true,
+    "rotate_every_hours": 4
+  }
+}
